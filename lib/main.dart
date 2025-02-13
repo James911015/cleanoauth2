@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_appauth/flutter_appauth.dart';
 
 import 'authorization_service.dart';
-import 'open_id_authenticator.dart';
 
 void main() => runApp(MyApp());
 
@@ -19,7 +18,6 @@ class MyApp extends StatelessWidget {
 }
 
 class MainPage extends StatelessWidget {
-  final OpenIDAuthenticator _authenticator = OpenIDAuthenticator();
 
   @override
   Widget build(BuildContext context) {
