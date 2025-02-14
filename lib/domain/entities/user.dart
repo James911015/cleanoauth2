@@ -1,8 +1,7 @@
 import 'package:equatable/equatable.dart';
 
-class User extends Equatable{
-
-  final int id;
+class User extends Equatable {
+  final int? id;
   final int? version;
   final bool? active;
   final int? createdBy;
@@ -11,10 +10,12 @@ class User extends Equatable{
   final String? lastModifiedDate;
   final bool? principal;
   final String? sid;
+
   //final Cooperator cooperator;
   final String? isEnabled;
   final String? username;
   final String? provider;
+
   //final List<GroupMap> groupMaps;
   final bool? enabled;
   final bool? accountNonExpired;
@@ -23,8 +24,8 @@ class User extends Equatable{
   final String? modifiedDate;
   final String? fullName;
 
-  User({
-       required this.id,
+  User(
+      {this.id,
       this.version,
       this.active,
       this.createdBy,
@@ -45,23 +46,23 @@ class User extends Equatable{
 
   @override
   List<Object?> get props => [
-    id,
-    version,
-    active,
-    createdBy,
-    createdDate,
-    lastModifiedBy,
-    lastModifiedDate,
-    principal,
-    sid,
-    isEnabled,
-    username,
-    provider,
-    enabled,
-    accountNonExpired,
-    accountNonLocked,
-    credentialsNonExpired,
-    modifiedDate,
-    fullName
-  ];
+        id,
+        version,
+        active,
+        createdBy,
+        createdDate,
+        lastModifiedBy,
+        lastModifiedDate,
+        principal,
+        sid,
+        isEnabled,
+        username,
+        provider,
+        enabled,
+        accountNonExpired,
+        accountNonLocked,
+        credentialsNonExpired,
+        modifiedDate,
+        fullName
+      ];
 }
