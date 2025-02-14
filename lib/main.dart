@@ -23,6 +23,8 @@ class MyApp extends StatelessWidget {
 
 class MainPage extends StatelessWidget {
 
+  static const String name= "MainPage";
+
   @override
   Widget build(BuildContext context) {
     AuthorizationService authService = AuthorizationService();
@@ -35,7 +37,8 @@ class MainPage extends StatelessWidget {
             AuthorizationTokenResponse? response = await authService.authenticate();
             if (response != null) {
               print("✅ Token obtenido: ${response.accessToken}");
-              context.push("/home");
+              //context.push("/home");//OpcionUno
+              context.pushNamed(HomeScreen.name);//OpcionDos
             } else {
               print("⚠️ No se pudo obtener el token");
             }
