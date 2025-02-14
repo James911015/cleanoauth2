@@ -1,6 +1,8 @@
+import 'package:cleanoauth2/core/routers/app_routers.dart';
 import 'package:cleanoauth2/presentation/screen/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_appauth/flutter_appauth.dart';
+import 'package:go_router/go_router.dart';
 
 import 'authorization_service.dart';
 
@@ -11,12 +13,10 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
+      routerConfig: appRouter,
+      debugShowCheckedModeBanner: false,
       title: 'Material App',
-      home: MainPage(),
-      routes: {
-        '/home': (context) => HomeScreen(),
-      },
     );
   }
 }
@@ -35,11 +35,7 @@ class MainPage extends StatelessWidget {
             AuthorizationTokenResponse? response = await authService.authenticate();
             if (response != null) {
               print("✅ Token obtenido: ${response.accessToken}");
-              Navigator.of(context).push(
-                MaterialPageRoute(
-                  builder: (context) => HomeScreen(),
-                ),
-              );
+              context.push("/home");
             } else {
               print("⚠️ No se pudo obtener el token");
             }
