@@ -1,3 +1,4 @@
+import 'package:cleanoauth2/presentation/screen/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_appauth/flutter_appauth.dart';
 
@@ -31,6 +32,11 @@ class MainPage extends StatelessWidget {
             AuthorizationTokenResponse? response = await authService.authenticate();
             if (response != null) {
               print("✅ Token obtenido: ${response.accessToken}");
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (context) => HomeScreen(),
+                ),
+              );
             } else {
               print("⚠️ No se pudo obtener el token");
             }

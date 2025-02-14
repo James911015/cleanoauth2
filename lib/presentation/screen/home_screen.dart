@@ -5,6 +5,11 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      appBar: AppBar(title: Text("Pantalla Principal"),),
+      body: const Center(
+        child: Text("Bienvenido a la pantalla principal"),
+      ),
+    );
   }
 }
