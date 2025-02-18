@@ -16,11 +16,12 @@ class AuthorizationService {
         AuthorizationTokenRequest(
           clientId,
           redirectUri,
+          discoveryUrl: "https://ggce-api1.alliance.cgiar.org/.well-known/openid-configuration",
           clientSecret: "1gLJh5echtZ7TAmnu8cAJLMzbppmzkSn",
-          serviceConfiguration: AuthorizationServiceConfiguration(
+          /*serviceConfiguration: AuthorizationServiceConfiguration(
             authorizationEndpoint: authorizationEndpoint,
             tokenEndpoint: tokenEndpoint,
-          ),
+          ),*/
           scopes: scopes,
         ),
       );
