@@ -1,0 +1,2 @@
+D:/GitProjects/Flutter/cleanoauth2/android/app/.cxx/Debug/5a05w2a2/x86/CMakeFiles/edit_cache.dir
+D:/GitProjects/Flutter/cleanoauth2/android/app/.cxx/Debug/5a05w2a2/x86/CMakeFiles/rebuild_cache.dir
