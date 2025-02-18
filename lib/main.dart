@@ -1,5 +1,6 @@
 import 'package:cleanoauth2/core/routers/app_routers.dart';
 import 'package:cleanoauth2/presentation/providers/user_provider.dart';
+import 'package:cleanoauth2/presentation/screen/form_screen.dart';
 import 'package:cleanoauth2/presentation/screen/home_screen.dart';
 import 'package:cleanoauth2/singleton.dart';
 import 'package:flutter/material.dart';
@@ -55,7 +56,8 @@ class MainPage extends StatelessWidget {
               print("✅ Token obtenido: ${response.accessToken}");
               Singleton.token = "Bearer ${response.accessToken}";
               //context.push("/home");//OpcionUno
-              context.pushNamed(HomeScreen.name);//OpcionDos
+              //context.pushNamed(HomeScreen.name);//OpcionDos
+              context.pushNamed(FormScreen.name);//OpcionDos
             } else {
               print("⚠️ No se pudo obtener el token");
             }
