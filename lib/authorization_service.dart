@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_appauth/flutter_appauth.dart';
 import 'package:http/http.dart' as http;
 import 'package:http/http.dart' as client;
-import 'package:url_launcher/url_launcher.dart';
+
 
 class AuthorizationService {
   final FlutterAppAuth _appAuth = FlutterAppAuth();
